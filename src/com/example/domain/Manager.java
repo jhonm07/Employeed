@@ -17,6 +17,11 @@ private String deptName;
         this.deptName=deptName;
     }
 
+    @Override
+    public String toString() {
+        return "Manager{" + "deptName=" + deptName + '}';
+    }
+
     public String getDeptName() {
         return deptName;
     }

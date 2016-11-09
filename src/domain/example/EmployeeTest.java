@@ -25,7 +25,8 @@ public class EmployeeTest  {
         Manager ma= new Manager(207,"Barbara Johnson", "054-12-2367", 109_501.36,"US Marketing");
         Admin ad= new Admin(12,"Bill Munroe","099-45-2340", 75_002.34);
         Director dir= new Director(12, "Susan Wheeler", " 099-45-2340", 120_567.36, "Global Marketing",1_000_000.00);
-       en.printEmployee(en, ad, ma, dir);
+       
+       
         
 
 // TODO code application logic here

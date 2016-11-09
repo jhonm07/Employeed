@@ -42,7 +42,10 @@ public class Employee {
     }
 
     public void setName(String name) {
-        this.name = name;
+        if(name!=null && name.equals("")){
+        this.name = name;    
+        }
+        
     }
 
     public String getSsn() {
@@ -62,41 +65,29 @@ public class Employee {
     }
     
     public void  raiseSalary(Double incrementaly){
-        
+        if(incrementaly>0){
         salary+=incrementaly;
     }
-    public  void   printEmployee (Engineer en,Admin ad,Manager ma,Director dir){
+    }
+    
+    public static void   printEmployee (Employee em){
 
-       System.out.println("Employeed Id: "+en.getEmpId());
-        System.out.println("Employeed name: "+en.getName());
-        System.out.println("Employeed Soc Sec #"+en.getSsn());
-        System.out.println("Employed salary:  "+en.getSalary());
-       System.out.println("Employeed Id: "+en.getEmpId());
-        System.out.println("Employeed name: "+en.getName());
-        System.out.println("Employeed Soc Sec #"+en.getSsn());
-        System.out.println("Employed salary:  "+NumberFormat.getCurrencyInstance().format(en.getSalary()));
-        
-        System.out.println("Employeed Id: "+ma.getEmpId());
-        System.out.println("Employeed name: "+ma.getName());
-        System.out.println("Employeed Soc Sec #"+ma.getSsn());
-        System.out.println("Employed salary:  "+NumberFormat.getCurrencyInstance().format(ma.getSalary()));
         
         
-         System.out.println("Employeed Id: "+dir.getEmpId());
-        System.out.println("Employeed name: "+dir.getName());
-        System.out.println("Employeed Soc Sec #"+dir.getSsn());
-        System.out.println("Employed salary:  "+NumberFormat.getCurrencyInstance().format(dir.getSalary()));
-      
-        System.out.println("butget: "+NumberFormat.getCurrencyInstance().format(dir.getBudget()));
-       
-        System.out.println("Employeed Id: "+ad.getEmpId());
-        System.out.println("Employeed name: "+ad.getName());
-        System.out.println("Employeed Soc Sec #"+ad.getSsn());
-     System.out.println("Employed salary:  "+NumberFormat.getCurrencyInstance().format(ad.getSalary()));
-             
         
+        
+//        System.out.println("Employeed Id: " + getEmpId());
+//        System.out.println("Employeed name: " + getName());
+//        System.out.println("Employeed Soc Sec #" + getSsn());
+//        System.out.println("Employed salary:  " + getSalary());
+//        System.out.println("Employed salary:  " + NumberFormat.getCurrencyInstance().format(getSalary()));
 
       
 }
+
+    @Override
+    public String toString() {
+        return "Employee{" + "empId=" + empId + ", name=" + name + ", ssn=" + ssn + ", salary=" + salary + '}';
+    }
     
 }
