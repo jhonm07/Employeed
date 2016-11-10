@@ -70,24 +70,24 @@ public class Employee {
     }
     }
     
-    public static void   printEmployee (Employee em){
-
+ 
         
         
         
+      
         
-//        System.out.println("Employeed Id: " + getEmpId());
-//        System.out.println("Employeed name: " + getName());
-//        System.out.println("Employeed Soc Sec #" + getSsn());
-//        System.out.println("Employed salary:  " + getSalary());
-//        System.out.println("Employed salary:  " + NumberFormat.getCurrencyInstance().format(getSalary()));
 
       
-}
+
 
     @Override
     public String toString() {
-        return "Employee{" + "empId=" + empId + ", name=" + name + ", ssn=" + ssn + ", salary=" + salary + '}';
-    }
+        
+        return "Employeed Id: " + getEmpId() +"\n" +
+        "Employeed name: " + getName()+ "\n" +
+        "Employeed Soc Sec #" + getSsn()+ "\n" +
+        "Employed salary:  " + getSalary()+ "\n" +
+        "Employed salary:  " + NumberFormat.getCurrencyInstance().format(getSalary());
+    }   
     
 }
